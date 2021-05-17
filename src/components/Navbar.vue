@@ -10,6 +10,10 @@
           <router-link :to="{ name: 'CreatePlaylist' }"
             >Create Playlist</router-link
           >
+          <router-link :to="{ name: 'UserPlaylists' }"
+            >My Playlists</router-link
+          >
+          <span>Hi there, {{ user.displayName }}</span>
           <button @click="handleClick">Logout</button>
         </div>
         <router-link class="btn" :to="{ name: 'Signup' }" v-if="!user"
@@ -70,5 +74,13 @@ nav .links a,
 button {
   margin-left: 16px;
   font-size: 14px;
+}
+span {
+  font-size: 14px;
+  display: inline-block;
+  margin-left: 16px;
+  padding-left: 16px;
+  border-left: 1px solid #eee;
+  text-transform: capitalize;
 }
 </style>
